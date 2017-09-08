@@ -83,26 +83,55 @@
 			<a href="#"><img src="img/banner5.jpg" /></a>
 			<a href="#"><img src="img/banner6.jpg" /></a>
 			<a href="#"><img src="img/banner7.jpg" /></a>
-			<a href="#"><img src="img/banner8.jpgm" /></a>
+			<a href="#"><img src="img/banner8.jpg" /></a>
 			<a href="#"><img src="img/banner9.jpg" /></a>
 			<a href="#"><img src="img/banner10.jpg" /></a>
+			<div class="points clear"></div>
 		</div>
-		
-<!--script start-->
+
+		<!--script start-->
 		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
 		<script type="text/javascript" src="js/jquery.easing.min.js"></script>
 		<script type="text/javascript">
-			var banner=$(".banner");
-			var img=$(".banner a");
-			var index=0;
-			var count=img.length;
-			img.hide().eq(0).show()
-			
-			
-			
-			
-			
-			
+			var banner = $(".banner");
+			var img = $(".banner a");
+			var index = 0;
+			var count = img.length;
+			img.hide().eq(0).show();
+
+			function bannerRunning() {
+				img.eq(index).fadeOut(200);
+				points.eq(index).removeClass("active")
+				index = (index + 1) % count;
+				img.eq(index).fadeIn(200);
+                points.eq(index).addClass("active")
+			}
+			var t = setInterval(bannerRunning, 2000);
+
+			banner.hover(function() {
+				clearInterval(t);
+			}, function() {
+				t = setInterval(bannerRunning, 2000);
+			})
+
+			for(var i = 0; i < count; i++) {
+				$(".points").append("<span></span>");
+			}
+			var points = $(".points span");
+			$(".points").css("margin-left", (-1 * 20 * count) + "px");
+			points.eq(0).addClass("active");
+
+			points.hover(function() {
+				var i = $(this).index();
+				if(i != index) {
+					img.eq(index).fadeOut(200);
+					points.eq(index).removeClass("active");
+				} index = i
+					img.eq(index).fadeIn(200);
+					points.eq(index).addClass("active")
+		
+
+			});
 		</script>
 	</body>
 
