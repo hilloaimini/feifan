@@ -211,7 +211,7 @@ a {
 	margin: 0 25px;
 }
 
-.midmain>ul>li {
+.mainul1>li {
 	font-size: 16px;
 	line-height: 40px;
 	float: left;
@@ -220,7 +220,7 @@ a {
 	text-align: center;
 }
 
-.midmain>ul>li.active {
+.mainul1>li.active {
 	font-size: 16px;
 	line-height: 40px;
 	float: left;
@@ -231,7 +231,7 @@ a {
 	text-align: center;
 }
 
-.midmain .mainlist {
+.mainlist {
 	width: 730px;
 	border-top: 1px solid #DDDDDD;
 	float: left;
@@ -541,11 +541,22 @@ a {
 }
 
 /*slidshow*/
-.slid{width: 1200px; ;}
+.slid{width: 1200px;margin-top: 48px;}
+.slid h2{float: left; display: block;margin-right: 145px;font-style: nomal;line-height: 40px;}
+
+
+.slidul li{float: left;width: 106px;display: block;text-align: center;font-size: 16px;height: 40px;line-height: 40px;}
+
+.slidul li.active {border-bottom: 1px solid red; color: red;}
+
+
+.con{position: relative; height: 278px;}
+.show{width: 1200px;border-top: 1px solid #DDDDDD;padding-top: 36px;position: absolute;top: 0;left: 0;display: none;}
+.show:nth-of-type(1){display: block;}
+.show:nth-of-type(2){display: block;}
+.show div{float: left;width: 284px;height: 256px;border: 1px solid #DDDDDD;text-align: center;padding-top: 10px;margin-right:10px;}
+.show img{width: 270px;height: 180px;}
 
 
 
-.showa{}
-.showa div{float: left;width: 284px;height: 256px;border: 1px solid #DDDDDD;text-align: center;padding-top: 10px;}
-.showa img{width: 270px;height: 180px;}
 
