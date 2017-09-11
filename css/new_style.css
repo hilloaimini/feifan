@@ -47,6 +47,36 @@ a{text-decoration: none;}
 .banner .points{position: absolute;bottom: 20px;left: 50%;z-index: 100;}
 .banner .points span{ display: block;height: 10px;width: 10px;border-radius: 50%;background-color: white;float: left;margin: 0 15px;}
 .banner .points span.active{background-color: red;}
+/*mid start*/
+
+.mid{width: 1200px;margin-top: 30px;}
+.midleft{width: 220px;float: left;}
+.midleft .kecheng{display: block;height: 40px;width: 170px;background: url(../img/kecheng.png) no-repeat 20px center
+#DD2727;padding-left: 50px;font-size: 18px;color: white;line-height: 40px;}
+.leftul{width: 218px;border: 1px solid #DDDDDD;}
+.leftul>li{width: 198px;height:42px;padding-left: 20px;border-bottom: 1px solid #DDDDDD;}
+.leftul>li>a{font-size: 12px;color: #999999;}
+.leftul>li>span{color: #333333;font-size: 16px;line-height: 42px;margin-right: 20px;}
+.leftul>li:hover{background-color: #F3F3F3;}
+.leftul>li:hover .leftul>li>a{color: #D03322;cursor: pointer;}
+.leftul>li:hover .leftul>li>span{color:#D03322 ;}
+
+.leftli1{position: relative;}
+.leftul1{position: absolute;left: 219px;top: 0;width: 620px;border: 1px solid #DDDDDD;padding: 20px 0;background-color: #F8F8F8;display: none;}
+.leftul1>li{float: left; display: block;height: 63px;border-top: 1px solid #DDDDDD;width: 270px;padding-left: 20px;margin-left: 20px;}
+.leftul1>li>a{color: #333333;font-size: 14px;}
+.leftul1>li a:hover{color: #DD2727;font-size: 14px;}
+.leftli1:hover .leftul1{display: block;}
+/*midmain*/
+
+.midmain ul li{font-size: 18px;line-height: 40px;float: left;}
+
+
+
+
+
+
+
 
 
 
