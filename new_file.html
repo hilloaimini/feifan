@@ -581,12 +581,12 @@
 				<div class="demo">今日报名：</div>
 				<div class="indemo clear">
                 
-					<span>徐汇校区</span><span>王**</span><span>电话：137****1231</span><span >UI交互设计</span><span>&nbsp;8时35分</span><span>报名成功<img src="img/xl.jpg" alt="" />
-					<span>浦东校区</span><span>李**</span><span>电话：138****4632</span>&nbsp;<span>网络工程</span><span>&nbsp;9时13分</span><span>报名成功<img src="img/xl.jpg" alt="" />
-					<span>人广校区</span><span>赵**</span><span>电话：131****7965</span><span>服装设计</span><span>&nbsp;9时20分</span><span>报名成功<img src="img/xl.jpg" alt="" />
+					<div class="ind">徐汇校区     王**   电话：137****1231  UI交互设计    &nbsp;8时35分    <span>报名成功</span><img src="img/xl.jpg" alt="" /></div>
+					<div class="ind">浦东校区    李**  电话：138****4632&nbsp;  网络工程    &nbsp;9时13分<span>报名成功</span><img src="img/xl.jpg" alt="" /></div>
+					<div class="ind">人广校区     赵**  电话：131****7965   服装设计   &nbsp;9时20分 <span>报名成功</span><img src="img/xl.jpg" alt="" /></div>
 				</div>
 			</div>
-		</div>
+		
 			<!--kechengbaoming-->
 			<!--jiaoshijieshao-->
 		<div class="teach clear">
@@ -752,14 +752,19 @@
 			
 		//gundongtiao
 			var Regwidth=0;
-			$(".indemo span").each(function(){
-				Regwidth+=$(this).width();});
-             $(".indemo").width(Regwidth);
+			$(".ind").each(function(){
+				
+				Regwidth+=$(this).width();
+			console.log($(this).width());
+			
+			});
+				
+             $(".indemo").width(Regwidth+100);
              setInterval(function(){
-             	$(".indemo span").animate({
+             	$(".indemo").animate({
              		left:-1*Regwidth+"px"
-             	},5000);
-             },5000);
+             	},20000);
+             },2000);
 			
 			//jiaoshijieshaolunbo
 //			var jieshao=document.getElementsByClassName("int").all;

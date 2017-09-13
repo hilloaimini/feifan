@@ -583,17 +583,17 @@ a {
 .bandl4 dt{color: red;}
 .bandl5 dt{color: #51B8F1;text-align: center;}
 
-/*qustion*/
-.gun{width: 1200px;height: 35px;border-bottom: 1px solid #DDDDDD;}
-.demo{background:url(../img/bm.jpg) no-repeat left 0 white;width:80px;height: 35px;padding-left: 30px;font-size: 14px;line-height: 35px;float: left;}
+/*qustion over*/
+.gun{width: 1200px;height: 35px;border-bottom: 1px solid #DDDDDD;position: relative;overflow: hidden;}
+.demo{background:url(../img/bm.jpg) no-repeat left 0 white;width:80px;height: 35px;padding-left: 30px;font-size: 14px;line-height: 35px;position: absolute;left: 0;top: 0;z-index: 999;}
 
 
-.indemo{width: 900px;height: 35px;position: relative;float:left;}
+.indemo{float:left;position: absolute;left: 110px;top: 0;}
+.indemo .ind{float: left;font-size: 14px;height: 35px;line-height: 35px;}
+.ind span{color: red;}
 
-.indemo>span{ position: absolute;top: 0;left:0;float: left;overflow: hidden;}
 
-
-/*qustion*/
+/*qustion over*/
 
 /*qustion*/
 .teach{width: 1200px; height: 248px;margin:76px auto;overflow: hidden;}
