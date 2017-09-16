@@ -588,21 +588,25 @@
 			</div>
 		
 			<!--kechengbaoming-->
-			<!--jiaoshijieshao-->
+			<!--shizhililiang-->
 		<div class="teach clear">
 			<div class="clear"><h2>师资力量</h2>
-			<a href="#"><span></span><span></span>查看全部<span></span></a></div>
+			<a href="#"><span></span><span></span>查看全部<span></span></a>
+			</div>
+			<div class="box1">
 			<div class="int"><img src="img/show1.jpg" /><p>淮北大学计算机科学与技术专业；资深网页设计师，高级中学教师资格；拥有12年网站设计实战经验，熟练运用网页制作软件及相关编程语言，并拥有成熟的网站开发技巧</p><div class="teacher"><span>吴老师</span>高级服装讲师</div></div>
 			<div class="int"><img src="img/show2.jpg"/><p>上海师范大学视觉传达专业毕业，素凡文化联合创始人并任艺术总监；曾任职启元文化、拓美广告，代表作品有飞  利浦照明期刊策划，黄浦区中小学禁毒创意大赛策划实施，ICU镇静论坛（恩华）策划</p><div class="teacher"><span>吴老师</span>高级服装讲师</div></div>
 			<div class="int"><img src="img/show3.jpg"/><p>淮北大学计算机科学与技术专业；资深网页设计师，高级中学教师资格；拥有12年网站设计实战经验，熟练运用网页制作软件及相关编程语言，并拥有成熟的网站开发技巧</p><div class="teacher"><span>吴老师</span>高级服装讲师</div></div>
 			<div class="int"><img src="img/show4.jpg"/><p>淮北大学计算机科学与技术专业；资深网页设计师，高级中学教师资格；拥有12年网站设计实战经验，熟练运用网页制作软件及相关编程语言，并拥有成熟的网站开发技巧</p><div class="teacher"><span>吴老师</span>高级服装讲师</div></div>
+			
 			<div class="int"><img src="img/show5.jpg"/><p>淮北大学计算机科学与技术专业；资深网页设计师，高级中学教师资格；拥有12年网站设计实战经验，熟练运用网页制作软件及相关编程语言，并拥有成熟的网站开发技巧</p><div class="teacher"><span>吴老师</span>高级服装讲师</div></div>
 			<div class="int"><img src="img/show6.jpg"/><p>淮北大学计算机科学与技术专业；资深网页设计师，高级中学教师资格；拥有12年网站设计实战经验，熟练运用网页制作软件及相关编程语言，并拥有成熟的网站开发技巧</p><div class="teacher"><span>吴老师</span>高级服装讲师</div></div>
 			<div class="int"><img src="img/show7.jpg"/><p>淮北大学计算机科学与技术专业；资深网页设计师，高级中学教师资格；拥有12年网站设计实战经验，熟练运用网页制作软件及相关编程语言，并拥有成熟的网站开发技巧</p><div class="teacher"><span>吴老师</span>高级服装讲师</div></div>
 			<div class="int"><img src="img/show8.jpg"/><p>淮北大学计算机科学与技术专业；资深网页设计师，高级中学教师资格；拥有12年网站设计实战经验，熟练运用网页制作软件及相关编程语言，并拥有成熟的网站开发技巧</p><div class="teacher"><span>吴老师</span>高级服装讲师</div></div>
 			
+			</div>
 		</div>
-			<!--jiaoshijieshao-->
+			<!--jshizhililiang-->
 		<div class="slid1">
 			<h2 class="new1">学员作品</h2>
             <ul class="slidul1 clear">
@@ -766,12 +770,40 @@
              	},20000);
              },2000);
 			
-			//jiaoshijieshaolunbo
-//			var jieshao=document.getElementsByClassName("int").all;
-//			
-//			var count=getElementsByTagName("img").length;
-//			
-//			var last = jieshao.firstElementChild.cloneNode(true);
+  
+  
+  //shizhililiang
+			var teach=$(".teach");
+			var box1=$(".box1");
+			
+			var count=$(".box1").length;
+			
+			var width = $(".teach").width();
+			
+			var first = $(".int:first-child").clone(true);
+		    box1.append(first);
+		   
+		   box1.width(width*(count+1));
+		   var z=0;
+			setInterval(function(){
+				z=(z+1)%count
+				if(z==0){
+					box1.animate({left:width*-1*count+"px"},5000,function(){
+						box1.css("left","0px");
+					});
+				}else{
+					box1.animate({left:width*-1*z+"px"},5000);
+				}
+			},500);
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			$(" .slidul1 li").hover(function() {
 				var g = $(this).index();
